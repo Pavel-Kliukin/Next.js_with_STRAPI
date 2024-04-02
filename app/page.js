@@ -1,25 +1,11 @@
 import { get } from "http";
 import Image from "next/image";
 import { strapiFetcher } from "@/lib/api";
+import { setToken } from "@/lib/auth";
 
 export default async function Home() { 
 
-  const books = await strapiFetcher('books');
-  const authData = await strapiFetcher('auth/local', 
-  {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      identifier: 'Tester',
-      password: 'wrongpassword',
-    }),
-  }
-  );
-  console.log(authData);
-  setToken(authData)
-  
+  const books = await strapiFetcher('books');  
 
   return (
     <>

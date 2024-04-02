@@ -10,7 +10,6 @@ export async function strapiFetcher(url:string, option = {}) {
   }
   if (!response.ok) {
     const res = response.json()
-    console.log("***********************************************");
     
     return res
   } else {

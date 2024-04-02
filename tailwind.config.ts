@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import forms from '@tailwindcss/forms';
 
 const config: Config = {
   content: [
@@ -15,6 +16,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), forms],
 };
 export default config;
