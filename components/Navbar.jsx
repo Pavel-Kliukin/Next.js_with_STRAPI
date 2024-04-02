@@ -18,7 +18,6 @@ const Navbar = () => {
       ...data,
       [e.target.name]: e.target.value,
     });
-    console.log('ident', data.identifier);
 
   }
 
@@ -41,9 +40,6 @@ const Navbar = () => {
     console.log(authData);
     setToken(authData)
   }
-
-
-
 
   return (
     <div className="navbar bg-base-100">
