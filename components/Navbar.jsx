@@ -3,8 +3,10 @@ import { strapiFetcher } from '@/lib/api';
 import { setToken } from '@/lib/auth';
 import { useUser } from '@/lib/authContext';
 import { useState } from 'react'
+import { useFetchUser } from '@/lib/authContext';
 
 const Navbar = () => {
+
 
   const [data, setData] = useState({
     identifier: '',

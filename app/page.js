@@ -6,8 +6,8 @@ import Reviews from "@/components/Reviews";
 
 export default async function Home() { 
 
-  const books = await strapiFetcher('books');  
-  console.log('Send: ', books);
+  const books = await strapiFetcher('books?populate=*');  
+  console.log(books.data[1]);
 
   return (
     <>
@@ -18,6 +18,11 @@ export default async function Home() {
             <div 
               key={book.id}
               className="w-full">
+              <Image
+                src={`http://127.0.0.1:1337${book.attributes.cover.data.attributes.url}`}
+                alt="Book cover"
+                width={200}
+                height={300} />
               <p className="mb-4 text-xl font-semibold">{`${book.attributes.title}`}</p>
               <p>{`${book.attributes.author}`}</p>
             </div>

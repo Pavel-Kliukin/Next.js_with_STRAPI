@@ -1,6 +1,5 @@
 const Reviews = ({books}) => {
 
-  console.log('Recieved: ', books);
   return (
     <div className="mb-8 min-w-[900px] flex justify-between">{books.data.map((book) => {
       return (
