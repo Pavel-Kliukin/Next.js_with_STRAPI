@@ -19,6 +19,7 @@ const Navbar = () => {
   }, [dispatch, userStatusTrigger])
 
   const isUser = useSelector((state) => state.user.isUser)
+  const userName = useSelector((state) => state.user.userName)
 
   const [data, setData] = useState({
     identifier: '',
@@ -84,10 +85,10 @@ const Navbar = () => {
                 alt="User avatar"
                 width={100}
                 height={100}
-                src="/assets/avatar.jpeg"
+                src="/assets/avatar.jpg"
               />
             </div>
-            <div className='text-violet-600'>{data.identifier}</div>
+            <div className='text-violet-600'>{userName}</div>
           </div>
         </div>
       ) : (

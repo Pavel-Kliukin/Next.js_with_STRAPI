@@ -10,7 +10,7 @@ export default async function Home() {
     <>
       <main className="flex min-h-screen flex-col items-center justify-start">
         <h1 className="mt-10 mb-20 text-2xl">BOOKS</h1>
-        <div className="mb-8 min-w-[900px] flex justify-between">{books.data.map((book) => {
+        <div className="mb-8 min-w-[1200px] flex justify-between">{books.data.map((book) => {
           return (
             <div 
               key={book.id}
@@ -25,7 +25,7 @@ export default async function Home() {
             </div>
           )
         })}</div>
-        <Reviews books={books} />
+        <Reviews booksWithoutReviews = {books} />
       </main>
     </>
   );
