@@ -1,13 +1,10 @@
-import { get } from "http";
 import Image from "next/image";
 import { strapiFetcher } from "@/lib/api";
-import { setToken } from "@/lib/auth";
 import Reviews from "@/components/Reviews"; 
 
 export default async function Home() { 
 
   const books = await strapiFetcher('books?populate=*');  
-  console.log(books.data[1]);
 
   return (
     <>

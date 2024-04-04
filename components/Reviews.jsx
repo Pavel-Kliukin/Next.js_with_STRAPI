@@ -1,3 +1,7 @@
+'use client'
+
+import store from '@/redux/store';
+
 const Reviews = ({books}) => {
 
   return (
