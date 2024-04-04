@@ -33,7 +33,7 @@ const Navbar = () => {
 
   }
 
-  const submitHanlder = async (e) => {
+  const loginHanlder = async (e) => {
     e.preventDefault();
 
     const authData = await strapiFetcher('auth/local', 
@@ -87,6 +87,7 @@ const Navbar = () => {
                 src="/assets/avatar.jpeg"
               />
             </div>
+            <div className='text-violet-600'>{data.identifier}</div>
           </div>
         </div>
       ) : (
@@ -103,7 +104,7 @@ const Navbar = () => {
             </div>
             <div className="form-control">
               <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="Password"
                 className="input input-bordered w-24 md:w-auto"
@@ -112,7 +113,7 @@ const Navbar = () => {
             </div>
             <button
               className="btn btn-outline btn-primary"
-              onClick={submitHanlder}
+              onClick={loginHanlder}
             >
               Login
             </button>
