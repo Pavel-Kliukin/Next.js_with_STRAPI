@@ -68,7 +68,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">STRAPI touch</a>
       </div>
       {isUser ? (
-        <div className="flex-none gap-4">
+        <div className="flex-none gap-4 mr-8">
           <button
             className="btn btn-outline btn-primary"
             onClick={logoutHanlder}
@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
         </div>
       ) : (
-        <div className="flex-none gap-4">
+        <div className="flex-none gap-4 mr-8">
           <form className="flex gap-4">
             <div className="form-control">
               <input
