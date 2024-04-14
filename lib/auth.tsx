@@ -10,7 +10,7 @@ interface ErrorData {
       path: string[];
       message: string;
       name: string;
-    }[];
+    }[] 
   };
 }
 
@@ -55,11 +55,17 @@ export const setToken = (data: StrapiResponse) => {
     // }
   }
 
+  // If there is an error message in data, log it
   else if ('error' in data) {
     console.log(data.error.name);
-    data.error.details.errors.map((error) => {
-      console.log(error.message);
-    });
+    if ('errors' in data.error.details && data.error.details.errors.length > 0) {
+      // If there are multiple errors, log them all
+      data.error.details.errors.map((error) => {
+        console.log(error.message);
+      });
+    } else {
+      console.log(data.error.message);
+    }
   }
 }
 

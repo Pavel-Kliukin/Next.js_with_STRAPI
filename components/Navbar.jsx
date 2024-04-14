@@ -49,7 +49,6 @@ const Navbar = () => {
       }),
     }
     );
-    console.log(authData);
 
     setToken(authData)
 
